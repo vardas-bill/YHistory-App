@@ -1,0 +1,85 @@
+/* CSS FOR OLD LOGIN FORM
+.auth-img {
+  width: 50%;
+  margin: 0 25%;
+}
+
+.login form {
+  margin-bottom: 32px;
+}
+
+.login form button {
+  margin-top: 20px;
+}
+*/
+
+.login-page-background {
+  color:white;
+  background-color: $app-color;//#1C9C8F;
+}
+.login-form {
+  margin-top:10px;
+}
+.login-button {
+  margin-top:40px;
+  min-height:40px;
+  width:99%;
+  background-color: transparent;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: white;
+}
+.login-signup-button {
+  min-height:40px;
+  width:99%;
+  background-color: transparent;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: white;
+}
+.forgot-password {
+  font-size:12px;
+  font-weight:200;
+  color:white;
+  background-color: $app-color;//#1C9C8F;
+}
+.login-page .logo {
+  padding: 20px 0;
+  min-height: 200px;
+  text-align: center;
+
+}
+.login-page .logo img {
+  max-width: 150px;
+}
+
+.login-tandc {
+  margin-top:20px;
+  margin-bottom:-10px;
+  color:white;
+  background-color: $app-color;//#1C9C8F;
+}
+.login-tandc-label {
+  font-size:12px;
+}
+.login-tandc-checkbox {
+  font-size:10px;
+}
+.login-tandc-link {
+  font-size:12px;
+  font-weight:200;
+  margin-top:0px;
+  margin-left:40px;
+  color:white;
+  background-color: $app-color;//#1C9C8F;
+}
+
+ion-input {
+  background-color: $app-color;
+  color:white;
+}
+

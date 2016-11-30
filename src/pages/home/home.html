@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="title-bar-text"></p></ion-title>
+    <ion-buttons end>
+      <!--
+      {{theUserData.viewCount}}<img src="img/tiny-v.png" height="12" style="margin-left:3px;margin-bottom: -1px;">
+      -->
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+  <ion-row>
+    <div class="tip_title">world</div>
+  </ion-row>
+  <ion-row>
+    <div class="tip_title">image</div>
+  </ion-row>
+  <ion-row>
+    <div class="tip_title">archive</div>
+  </ion-row>
+  <ion-row>
+    <div class="tip_infinity_logo">
+      <ion-icon name="ios-infinite"></ion-icon>
+    </div>
+  </ion-row>
+  <ion-row>
+    <!--<div class="tip_strapline">recording the world one image at a time</div>-->
+    <div class="tip_strapline">Your Life, Your Experiences, Your World <!--own your place in time and space--></div>
+  </ion-row>
+
+  <ion-row>
+    <button   class="submit_photo_button"  light outline (click)="addPhoto()"><ion-icon class="home_camera_icon" name="ios-camera"></ion-icon></button>
+  </ion-row>
+  <ion-row style="position:absolute;bottom:10px;left:0px;">
+    <button   class="about_button"  light outline (click)="about()">
+      INFO
+      <!--
+      <ion-icon name="ios-information-circle-outline"></ion-icon>
+      -->
+    </button>
+
+    <button   class="website_button" light outline (click)="website()">WEBSITE</button>
+  </ion-row>
+</ion-content>

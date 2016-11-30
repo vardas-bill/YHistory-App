@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="title-bar-text">Donate Photo</p></ion-title>
+    <ion-buttons end>
+      <!--
+      {{theUserData.viewCount}}<img src="img/tiny-v.png" height="12" style="margin-left:3px;margin-bottom: -1px;">
+      -->
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="photo">
+
+  <ion-row><div class="photo-step photo-step1">1. Select photo</div></ion-row>
+
+    <ion-row>
+      <button  ion-button class="photo-select-photo-button" dark outline (click)="addPhoto()">SELECT PHOTO...</button>
+    </ion-row>
+  <!--
+    <ion-row>
+      <button  ion-button dark outline full (click)="addInstagram()">SUBMIT INSTAGRAM LINK</button>
+    </ion-row>
+    -->
+    <ion-row>
+      <ion-col>
+        <img class="photo-img" src="{{theImage}}">
+      </ion-col>
+    </ion-row>
+
+
+  <form #mediaForm="ngForm" novalidate>
+    <!--
+    <ion-item class="url-item">
+      <ion-label class="label-font" floating primary>INSTAGRAM URL:</ion-label>
+      <ion-input [(ngModel)]="submitMediaItem.url" class="input-font" ngControl="url" type="text" #url="ngForm" >
+      </ion-input>
+    </ion-item>
+    <p [hidden]="url.valid || submitted == false" danger padding-left>
+      The Instagram URL is required
+    </p>
+    -->
+    <ion-row><div class="photo-step photo-step2">2. Add optional description</div></ion-row>
+
+    <!--
+    <ion-row class="photo-title-row">
+      <ion-col>
+        <span class="photo-heading">Image Description:</span>
+      </ion-col>
+    </ion-row>
+    -->
+    <ion-row class="title-row">
+      <ion-col>
+        <ion-item class="title-item photo-description-text">
+          <ion-textarea class="photo-description-text" [(ngModel)]="submitMediaItem.title" class="input-font" ngModel name="title" type="text" #title="ngModel" placeholder="Optional image description...">
+          </ion-textarea>
+        </ion-item>
+        <!--
+        <p [hidden]="title.valid || submitted == false" danger padding-left>
+          Title is required
+        </p>
+        -->
+      </ion-col>
+    </ion-row>
+
+    <!--
+    <ion-row class="photo-tandc-title">
+      <ion-col >
+        <span (click)="showTerms()">Terms: (click here)</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="photo-tandc-row">
+      <ion-item>
+        <ion-label class="photo-tandc-label">I accept the Terms & Conditions</ion-label>
+        <ion-checkbox dark checked="false" [(ngModel)]="tandc"></ion-checkbox>
+      </ion-item>
+    </ion-row>
+    -->
+    <ion-row><div class="photo-step photo-step3">3. Select photo type(s)<ion-icon class="photo-category-help-icon" name="ios-information-circle-outline" (click)="categoryHelp()"></ion-icon></div></ion-row>
+
+    <ion-list no-lines class="photo-category-list">
+
+      <ion-item class="photo-category-list">
+        <ion-label>Event</ion-label>
+        <ion-checkbox [(ngModel)]="event" name="event"></ion-checkbox>
+      </ion-item>
+
+      <ion-item class="photo-category-list">
+        <ion-label>Nature</ion-label>
+        <ion-checkbox [(ngModel)]="nature" name="nature"></ion-checkbox>
+      </ion-item>
+
+      <ion-item class="photo-category-list">
+        <ion-label>Man Made</ion-label>
+        <ion-checkbox [(ngModel)]="architecture" name="architecture"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-row><div class="photo-step photo-step4">4. Submit to World Image Archive</div></ion-row>
+
+    <ion-row responsive-sm>
+        <button  ion-button class="photo-submit-button" (click)="onSubmit(mediaForm)" type="submit" dark outline>SUBMIT PHOTO</button>
+    </ion-row>
+  </form>
+</ion-content>

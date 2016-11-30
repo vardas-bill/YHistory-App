@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="title-bar-text">Recent WIA Photos</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="gallery" padding>
+  <ion-grid>
+    <ion-row *ngFor="let row of grid; let i=index">
+      <ion-col width-50 *ngFor="let file_uri of row; let j=index">
+        <img [src]="file_uri" (click)="showImage(file_uri, i, j)">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

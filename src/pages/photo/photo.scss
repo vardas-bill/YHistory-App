@@ -1,0 +1,144 @@
+.photo {
+  background-color: white;//#E7FFE7;//#1C9C8F;
+  color:black;//white;
+}
+
+.photo-img {
+
+}
+.title-item,.url-item{
+  margin-left:-16px;
+}
+.photo-submit-button{
+  margin-left:0px;
+  width:100%;
+  background-color: transparent;
+  border-color: $app-color;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: $app-color;//black;
+}
+.photo-select-photo-button{
+  margin-left:0px;
+  width:100%;
+  background-color: transparent;
+  border-color: $app-color;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: $app-color;//black;
+}
+
+.title-label{
+  font-size:14px;
+  padding-bottom:10px;
+  font-weight:400;
+  color: $app-color;//#1C9C8F;
+}
+.title-row {
+  margin-bottom:20px;
+  margin-top:0px;
+  margin-left:-16px;
+}
+/*
+.photo-tandc-row{
+  margin-bottom:20px;
+  margin-top:-6px;
+  margin-left:-12px;
+  font-size:14px;
+}
+.photo-tandc-title{
+  margin-bottom:0px;
+  margin-top:20px;
+  margin-left:0px;
+  font-size:14px;
+  color: #1C9C8F;
+}
+.photo-tandc-label{
+  font-size:14px;
+}
+*/
+.input-font{
+  font-size:14px;
+}
+.photo-heading{
+  margin-top:40px;
+  padding-top:10px;
+  margin-left:18px;
+  font-size:14px;
+  font-weight: 500;
+  //background-color: #1C9C8F;
+  color: $app-color;//black;//white;
+}
+.photo-title-row {
+  margin-left: -19px;
+}
+.photo-description-text{
+  //margin-left: -18px;
+  margin-top:10px;
+  margin-left:0px;
+  height: 60px;
+  vertical-align: top;
+  word-wrap: break-word;
+  text-wrap: normal;
+  text-justify: auto;
+  background-color: white;//#E7FFE7;//white;
+  color: darkslategrey;
+}
+.photo-row {
+  margin-left: -12px;
+}
+.photo-column-r{
+  margin-right:0px;
+  padding-right:0px;
+}
+
+.photo-step {
+  font-size:16px;
+  width: 100%;
+  padding-top:0px;
+  padding-bottom:4px;
+  padding-left:5px;
+  font-weight:200;
+  background-color:$app-color;//
+  color:white;
+}
+.photo-step::first-letter {
+  font-weight: 900;
+  color:$app-contrast-color;//#AAB209;//white;//#1C9C8F;//white;
+  font-size:20px;
+  background-color:$app-color;//
+  margin-right:10px;
+}
+.photo-step1 {
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.photo-step2 {
+  margin-top:20px;
+  margin-bottom:0px;
+}
+.photo-step3 {
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.photo-step4 {
+  margin-top:20px;
+  margin-bottom:0px;
+}
+
+.photo-category-list {
+  background-color: white;//#E7FFE7;
+  margin-bottom:0px;
+}
+.photo-category-help-icon {
+  margin-left:60px;
+  padding-top:5px;
+  //height:10px;
+  font-size:20px;
+  font-weight:500;
+  background-color:$app-color;
+  color:white;
+}
+

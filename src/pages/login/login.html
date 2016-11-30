@@ -1,0 +1,105 @@
+<!-- OLD LOGIN FORM
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="login">
+  <img src="http://placehold.it/600x200" class="auth-img">
+
+  <form [ngFormModel]="loginForm" (submit)="loginUser($event)">
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input ngControl="username" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input ngControl="password" type="password"></ion-input>
+    </ion-item>
+
+    <button  ion-button block type="submit">
+      Login
+    </button>
+
+  </form>
+
+  <button  ion-button block clear (click)="goToSignup()">
+    Create a new account
+  </button>
+
+  <button  ion-button block clear (click)="goToResetPassword()">
+    I forgot my password
+  </button>
+
+</ion-content>
+-->
+
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="title-bar-text">Login</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-page-background">
+
+  <ion-list class="login-page-background">
+    <!--
+    <div class="logo">
+      <img src="img/logo.png">
+    </div>
+    -->
+
+    <form #loginForm="ngForm" novalidate  class="login-page-background login-form">
+      <ion-item  class="login-page-background">
+        <ion-label class="login-page-background"  floating light>Username</ion-label>
+        <ion-input class="login-page-background" [(ngModel)]="login.username" ngModel name="username" type="text" #username="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p  class="login-page-background" [hidden]="username.valid || submitted == false" padding-left>
+        Email is required
+      </p>
+
+      <ion-item class="login-page-background">
+        <ion-label class="login-page-background"  floating light>Password</ion-label>
+        <ion-input class="login-page-background" [(ngModel)]="login.password" ngModel name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p class="login-page-background" [hidden]="password.valid || submitted == false"  padding-left>
+        Password is required
+      </p>
+
+      <ion-item  class="login-page-background" no-lines>
+        <a  class="login-page-background forgot-password" (click)="onForgotPassword(loginForm)">Forgot password...</a>
+      </ion-item>
+
+      <ion-item class="login-tandc" no-lines>
+        <ion-label class="login-tandc-label">I accept the Terms & Conditions</ion-label>
+        <ion-checkbox class="login-tandc-checkbox" dark checked="false" [(ngModel)]="tandc" name="tandc"></ion-checkbox>
+      </ion-item>
+      <ion-item class="login-page-background" no-lines>
+        <a  class="login-tandc-link" (click)="showTandC()">Terms and Conditions...</a>
+      </ion-item>
+
+      <ion-item  class="login-page-background" no-lines>
+
+        <button  ion-button class="login-button" (click)="onLogin(loginForm)" type="submit" light outline>LOGIN</button>
+
+      </ion-item>
+      <ion-item  class="login-page-background" no-lines>
+        <button  ion-button class="login-signup-button" (click)="onSignup()" light outline >SIGN UP...</button>
+      </ion-item>
+
+
+    </form>
+  </ion-list>
+
+</ion-content>

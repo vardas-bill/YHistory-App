@@ -1,0 +1,50 @@
+
+<!-- left menu -->
+<ion-menu  class="menu-background" [content]="content">
+
+  <ion-content class="outer-content menu-background">
+
+    <ion-list class="menu-background" *ngIf="loggedIn" style="margin-top:20px;">
+      <!--
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      -->
+      <button class="menu-background" ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">
+        <ion-icon class="menu-icon" [name]="p.icon"></ion-icon>
+        &nbsp;&nbsp;{{p.title}}
+      </button>
+    </ion-list>
+
+    <ion-list class="menu-background" *ngIf="!loggedIn">
+      <!--
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      -->
+      <button class="menu-background" ion-item menuClose *ngFor="let p of loggedOutPages" (click)="openPage(p)">
+        <ion-icon class="menu-icon" [name]="p.icon"></ion-icon>
+        &nbsp;&nbsp;{{p.title}}
+      </button>
+    </ion-list>
+
+
+    <ion-list class="menu-background menu-moderator" *ngIf="userIsModerator">
+      <!--
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      -->
+      <button class="menu-moderatorbackground" ion-item menuClose *ngFor="let p of moderatorPages" (click)="openPage(p)">
+        <ion-icon class="menu-icon" [name]="p.icon"></ion-icon>
+        &nbsp;&nbsp;{{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+
+<!-- main navigation -->
+<ion-nav id="nav" [root]="root" #content swipe-back-enabled="false"></ion-nav>
+

@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="title-bar-text">Signup</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="login-page-background">
+
+  <ion-list class="login-page-background">
+
+    <form #signupForm="ngForm" novalidate class="login-page-background">
+      <ion-item class="login-page-background">
+        <ion-label class="login-page-background" floating light>Email</ion-label>
+        <ion-input class="login-page-background" [(ngModel)]="signup.email" ngModel name="email" type="email" #email="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="email.valid || submitted == false" padding-left>
+        Email is required
+      </p>
+
+      <ion-item class="login-page-background">
+        <ion-label class="login-page-background" floating light>Username (6-15 characters)</ion-label>
+        <ion-input autocapitalize="off" class="login-page-background" [(ngModel)]="signup.username" ngModel name="username" type="text" #username="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="username.valid || submitted == false" danger padding-left>
+        Username must be between 3 and 15 chars
+      </p>
+
+      <ion-item class="login-page-background">
+        <ion-label class="login-page-background" floating light>Password (8-15 characters)</ion-label>
+        <ion-input class="login-page-background" [(ngModel)]="signup.password" ngModel name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>
+
+
+      <ion-item class="login-tandc" no-lines>
+        <ion-label class="login-tandc-label">I accept the Terms & Conditions</ion-label>
+        <ion-checkbox class="login-tandc-checkbox" dark checked="false" [(ngModel)]="tandc" name="tandc"></ion-checkbox>
+      </ion-item>
+      <ion-item class="login-page-background" no-lines>
+        <a  class="login-tandc-link" (click)="showTandC()">Terms and Conditions...</a>
+      </ion-item>
+
+
+      <div class="login-page-background" padding>
+        <button  ion-button class="signup-signup-button" (click)="onSignup(signupForm)" type="submit" light outline>CREATE ACCOUNT</button>
+      </div>
+    </form>
+  </ion-list>
+
+</ion-content>
+
+<!-- OLD SIGNUP FORM
+<ion-header>
+  <ion-navbar>
+    <button  ion-button menuToggle>
+      <ion-icon class="menu-burger-icon" name="menu"></ion-icon>
+    </button>
+    <ion-title>Signup</ion-title>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="signup">
+  <img src="img/logo.png" class="auth-img">
+  <form [ngFormModel]="signupForm" (submit)="signupUser($event)">
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input ngControl="email" type="email" placeholder="Your email address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input ngControl="username" type="text" placeholder="Your username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password (min 8 chars)</ion-label>
+      <ion-input ngControl="password" type="password" placeholder="Your password"></ion-input>
+    </ion-item>
+
+    <button  ion-button block type="submit">
+      Create an Account
+    </button>
+
+  </form>
+
+</ion-content>
+-->
+

@@ -1,0 +1,130 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// My app wide CSS
+$app-color: #394651;
+$menu-icon-color: #C3CC14;//#AAB209;
+$app-contrast-color: #C3CC14;//#AAB209;
+
+$colors: (
+  primary:    #394651,//#387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #394651,
+  favorite:   #69BB7B
+);
+
+body, p {
+  color: $app-color;
+}
+
+// CSS for popup tutorials
+//
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  left: 10%;
+  background-color: #fefefe;
+  //margin: auto;
+  //margin-bottom: auto;
+  //margin-left:auto;
+  //margin-right:auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  z-index:999999;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: $app-color;//#1C9C8F;;
+  color: white;
+}
+.modal-body {padding: 2px 16px;}
+.modal-footer {
+  padding: 2px 16px;
+  background-color: $app-color;//#1C9C8F;;
+  color: white;
+}
+
+.menu-background {
+  color:white;
+  background-color: $app-color !important;//#1C9C8F;
+}
+.menu-moderatorbackground {
+  color:white;
+  background-color: black;
+}
+.menu-moderator {
+  margin-top:-20px;
+}
+.menu-burger-icon {
+  //color:#1C9C8F;
+  color: $app-contrast-color;//white;
+}
+.menu-icon {
+  color:$menu-icon-color;
+}
+.toolbar-background {
+  background-color: $app-color;//#1C9C8F;
+  color: white;
+}
+.title-bar-text {
+  color: white;
+  font-weight:400;
+  min-width:70%;
+}
