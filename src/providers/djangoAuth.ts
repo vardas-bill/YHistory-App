@@ -49,13 +49,20 @@ export class DjangoAuth {
     });
   }
 
+  // Make an HTTP request (called by login, signup, etc.)
+  //
+  // args.url = API call to be added onto end of url (e.g: '/register/')
+  // args.method = GET | POST | PATCH
+  // args.data = Data to be sent with HTTP call
+  //
   request(args) {
 
     console.log('****** djangoAuth:request[1]: Just called with args = '+JSON.stringify(args));
 
     var theArgs = args;
 
-    // true param causes application/json to be added to headers
+    // Create the HTTP header then do the HTTP call
+    // [true param causes application/json to be added to headers]
     return this.createHeaders(true).then((headers) => {
       console.log('******:djangoAuth:request[3] HEADERS request headers to be used are: ' + JSON.stringify(headers.toJSON()));
 
@@ -72,7 +79,7 @@ export class DjangoAuth {
       var options = new RequestOptions({headers: headers, withCredentials: this.use_session});
 
       // NOTE: In the caller: .then() gets the resolve, and .catch() gets the reject
-      // Fire the request, as configured.
+      // Fire the request, as configured by RequestOptions.
       return new Promise((resolve, reject) => {
 
         if (method == 'GET') {
